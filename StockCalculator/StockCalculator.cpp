@@ -6,7 +6,7 @@
 int main()
 {
 	using namespace std;
-    cout << "Hello World!\n";
+    cout << "Boot Success!\n";
 
 	system("pause");
 	return 0;

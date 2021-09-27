@@ -153,7 +153,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MainApp.cpp" />
     <ClCompile Include="StockCalculator.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Function.h" />
+    <ClInclude Include="MainApp.h" />
+    <ClInclude Include="TotalInclude.h" />
+    <ClInclude Include="Typedef.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

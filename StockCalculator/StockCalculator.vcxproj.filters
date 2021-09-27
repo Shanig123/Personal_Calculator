@@ -13,10 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\00.MainApp">
+      <UniqueIdentifier>{4abe55fa-5aa3-4f3b-afb5-9796a4119728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Calculator1">
+      <UniqueIdentifier>{1a45d943-1d80-41e4-be66-b352f9857a67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01.Calculator2">
+      <UniqueIdentifier>{29f234a3-683e-4cdc-96ba-52212bdd134d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="StockCalculator.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="MainApp.cpp">
+      <Filter>소스 파일\00.MainApp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainApp.h">
+      <Filter>소스 파일\00.MainApp</Filter>
+    </ClInclude>
+    <ClInclude Include="TotalInclude.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Typedef.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

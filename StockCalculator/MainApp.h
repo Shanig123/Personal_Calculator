@@ -2,23 +2,29 @@
 #ifndef  __MAIN_APP_H__
 #define __MAIN_APP_H__
 
-#include "TotalInclude.h"
-
-
 class MainApp final
 {
 private:
-	explicit  MainApp() {};
+	explicit  MainApp();
 	explicit MainApp(const MainApp& _Copy) = default;
 	virtual ~MainApp() = default;
 public:
-	inline MainApp* InitApp();
-	inline void Free();
+	_uint UpdateApp();
+
 public:
-	void PrintMenu();
+	inline void StopUpdate() { m_bCheckUpdate = false; }
 
 private:
+	_bool m_bCheckUpdate;
 
+
+private:
+	_int PrintMenu();
+
+
+public:
+	static MainApp* InitApp(void);
+	void Free(void);
 
 	
 };

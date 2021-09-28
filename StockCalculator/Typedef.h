@@ -3,6 +3,13 @@
 #define __TYPEDEF_H__
 
 typedef char _char;
+typedef int _int;
+typedef unsigned int _uint;
+
+typedef float _float;
+typedef double _double;
+
+typedef bool _bool;
 
 
 #endif // !__TYPEDEF_H__

@@ -7,8 +7,48 @@
 int main()
 {
 	using namespace std;
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
+	MainApp* pMainApp = nullptr;
+restart_point:
 
+	pMainApp = MainApp::InitApp();
+	
+	if (!pMainApp)
+	{
+		Print_Log("Error! \n Failed MainApp Instance.\n");
+		if (pMainApp)
+		{
+			//delete pMainApp;
+			//pMainApp = nullptr;
+			pMainApp->Free();
+			pMainApp = nullptr;
+		}
+		system("pause");
+		return 0;
+	}
+
+	if (pMainApp->UpdateApp())
+	{
+		if (pMainApp)
+		{
+			//delete pMainApp;
+			//pMainApp = nullptr;
+			pMainApp->Free();
+			pMainApp = nullptr;
+		}
+		Print_Log("Program Err! Restart Prgram.");
+		system("pause");
+		goto restart_point;
+	}
+
+	if (pMainApp)
+	{
+		//delete pMainApp;
+		//pMainApp = nullptr;
+		pMainApp->Free();
+		pMainApp = nullptr;
+	}
 	system("pause");
 
 	return 0;

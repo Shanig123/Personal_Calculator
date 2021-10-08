@@ -7,23 +7,28 @@ MainApp::MainApp()
 {
 }
 
-_uint MainApp::UpdateApp()
+_Event MainApp::SetUpMainApp()
 {
-	_int iCheck = 0;
+	return _Event();
+}
+
+_Event MainApp::UpdateApp()
+{
+	_Event iCheck = NO_EVENT;
 	while (m_bCheckUpdate)
 	{
-		iCheck = 0;
+		iCheck = NO_EVENT;
 
 		iCheck = PrintMenu();
 
 
-		if (iCheck == -2)
+		if (iCheck == OUT_OF_RANGE)
 		{
 
-			return 1;
+			return OUT_OF_RANGE;
 		}
 	}
-	return _uint(0);
+	return _Event(NO_EVENT);
 }
 
 MainApp * MainApp::InitApp()
@@ -61,10 +66,11 @@ _int MainApp::PrintMenu()
 	using namespace std;
 	system("cls");
 	_int iSelectMenu = -1;
-
+	PRINT_MESSAGE("===================");
 	PRINT_MESSAGE("1. Calculator1");
 	PRINT_MESSAGE("2. Calculator2");
 	PRINT_MESSAGE("3. PrgramShutdown");
+	PRINT_MESSAGE("===================");
 	cout << "Input : ";
 
 	cin >> iSelectMenu;
@@ -76,23 +82,25 @@ _int MainApp::PrintMenu()
 		Print_Log("select 1");
 
 		system("pause");
+
 		break;
 	case 2:	
 		Print_Log("select 2");
 
 		system("pause");
+
 		break;
 	case 3:
 		m_bCheckUpdate = false;
 		break;
 	default:
 	{
-		if (iSelectMenu == 0)
+		if (iSelectMenu == 0) // 0을 고름.
 		{
 			Print_Log("select 0");
 			system("pause");
 		}
-		else
+		else //범위 밖의 숫자가 입력됨.
 		{
 			Print_Log("Error");
 			system("pause");
@@ -102,7 +110,7 @@ _int MainApp::PrintMenu()
 			}
 			//cin.ignore(numeric_limits<streamsize>::max(), '\n');
 			cin.ignore();
-			return -2;
+			return OUT_OF_RANGE;
 		}
 	}
 		break;

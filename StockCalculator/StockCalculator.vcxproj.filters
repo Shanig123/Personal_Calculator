@@ -16,11 +16,14 @@
     <Filter Include="소스 파일\00.MainApp">
       <UniqueIdentifier>{4abe55fa-5aa3-4f3b-afb5-9796a4119728}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.Calculator1">
-      <UniqueIdentifier>{1a45d943-1d80-41e4-be66-b352f9857a67}</UniqueIdentifier>
+    <Filter Include="소스 파일\03. Memo">
+      <UniqueIdentifier>{b68fc058-b18f-4050-a506-34b1b3011faa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\01.Calculator2">
+    <Filter Include="소스 파일\02. Calculator2">
       <UniqueIdentifier>{29f234a3-683e-4cdc-96ba-52212bdd134d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\01. Calculator1">
+      <UniqueIdentifier>{1a45d943-1d80-41e4-be66-b352f9857a67}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -29,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="MainApp.cpp">
       <Filter>소스 파일\00.MainApp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBasic_CompoundInterest.cpp">
+      <Filter>소스 파일\01. Calculator1</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +49,15 @@
     </ClInclude>
     <ClInclude Include="Typedef.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Define.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Extern.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CBasic_CompoundInterest.h">
+      <Filter>소스 파일\01. Calculator1</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

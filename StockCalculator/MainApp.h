@@ -8,8 +8,10 @@ private:
 	explicit  MainApp();
 	explicit MainApp(const MainApp& _Copy) = default;
 	virtual ~MainApp() = default;
+private:
+	_Event SetUpMainApp();
 public:
-	_uint UpdateApp();
+	_Event UpdateApp();
 
 public:
 	inline void StopUpdate() { m_bCheckUpdate = false; }
@@ -25,6 +27,7 @@ private:
 public:
 	static MainApp* InitApp(void);
 	void Free(void);
+private:
 
 	
 };

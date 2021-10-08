@@ -10,7 +10,9 @@ int main()
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
 	MainApp* pMainApp = nullptr;
+	_Event event_Collector = 0;
 restart_point:
+	event_Collector = 0;
 
 	pMainApp = MainApp::InitApp();
 	
@@ -19,8 +21,6 @@ restart_point:
 		Print_Log("Error! \n Failed MainApp Instance.\n");
 		if (pMainApp)
 		{
-			//delete pMainApp;
-			//pMainApp = nullptr;
 			pMainApp->Free();
 			pMainApp = nullptr;
 		}
@@ -28,17 +28,17 @@ restart_point:
 		return 0;
 	}
 
-	if (pMainApp->UpdateApp())
+	if (event_Collector = pMainApp->UpdateApp())
 	{
+		//이벤트 값이 발생하면 프로그램이 재시작됨.
 		if (pMainApp)
 		{
-			//delete pMainApp;
-			//pMainApp = nullptr;
 			pMainApp->Free();
 			pMainApp = nullptr;
 		}
 		Print_Log("Program Err! Restart Prgram.");
 		system("pause");
+
 		goto restart_point;
 	}
 

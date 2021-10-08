@@ -153,10 +153,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CBasic_CompoundInterest.cpp" />
     <ClCompile Include="MainApp.cpp" />
     <ClCompile Include="StockCalculator.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CBasic_CompoundInterest.h" />
+    <ClInclude Include="Define.h" />
+    <ClInclude Include="Extern.h" />
     <ClInclude Include="Function.h" />
     <ClInclude Include="MainApp.h" />
     <ClInclude Include="TotalInclude.h" />

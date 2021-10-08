@@ -3,8 +3,6 @@
 #ifndef __FUNCTION_H__
 #define __FUNCTION_H__
 
-#define PRINT_MESSAGE(message) cout<<message<<endl
-
 inline void Print_Log(const _char* cMessage)
 {
 	using namespace std;

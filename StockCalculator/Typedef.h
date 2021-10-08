@@ -5,6 +5,7 @@
 typedef char _char;
 typedef int _int;
 typedef unsigned int _uint;
+typedef _int _Event;
 
 typedef float _float;
 typedef double _double;

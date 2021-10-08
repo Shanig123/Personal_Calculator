@@ -24,6 +24,8 @@
 
 #include "Typedef.h"
 #include "Function.h"
+#include "Define.h"
+#include "Extern.h"
 
 
 #endif // !__TOTAL_INCLUDE_H__

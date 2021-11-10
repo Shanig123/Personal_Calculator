@@ -9,6 +9,13 @@ class CBasic_CompoundInterest
 private:
 	explicit CBasic_CompoundInterest();
 	virtual ~CBasic_CompoundInterest();
+
+public:
+	void Do_Compound();
+
+private:
+	void Print_OutPut();
+	void Input_Val();
 public:
 	static CBasic_CompoundInterest* Instance();
 	void Free();

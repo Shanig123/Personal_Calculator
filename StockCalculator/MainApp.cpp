@@ -2,6 +2,8 @@
 #include "TotalInclude.h"
 #include "MainApp.h"
 
+#define DEFAULT_VAL (-1)
+
 MainApp::MainApp()
 	:m_bCheckUpdate(true)
 {
@@ -65,11 +67,11 @@ _int MainApp::PrintMenu()
 {
 	using namespace std;
 	system("cls");
-	_int iSelectMenu = -1;
+	_int iSelectMenu = DEFAULT_VAL;
 	PRINT_MESSAGE("===================");
 	PRINT_MESSAGE("1. Calculator1");
 	PRINT_MESSAGE("2. Calculator2");
-	PRINT_MESSAGE("3. PrgramShutdown");
+	PRINT_MESSAGE("3. ProgramShutdown");
 	PRINT_MESSAGE("===================");
 	cout << "Input : ";
 
